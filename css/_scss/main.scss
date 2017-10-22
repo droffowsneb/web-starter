@@ -1,0 +1,121 @@
+@import '_colors.scss';
+@import '_fonts.scss';
+@import '_urls.scss';
+@import '_mixins.scss';
+
+// Your CSS/SCSS below this line
+
+body {
+  @include linear-gradient($background-grad-1, $background-grad-2);
+}
+
+h1, h2 {
+  font-family: $headline, $headline-fb;
+}
+
+h1 {
+  font-size: $headline-font-size;
+  color: $primary-color;
+  padding-bottom: 10px;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: $body, $body-fb;
+  color: $bg-color;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+img.mapImg {
+  width: 35%;
+  height: auto;
+  margin: 0px 10px 10px 0;
+  display: inline-block;
+}
+
+.tickets {
+  display: inline-block;
+  background: $primary-color;
+  padding: 15px;
+  border: 2px solid $bg-color;
+  border-radius: 8px;
+  margin: 10px 0px;
+}
+
+a {
+  color: $bg-color;
+}
+
+.btn {
+  background-color: $bg-color;
+  border: none;
+}
+
+nav{
+  background-color: $bg-color;
+  height: 60px;
+  padding-top:0px !important;
+  padding-bottom:0px !important;
+
+  ul{
+    background: $bg-color;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li{
+    display: inline-block;
+  }
+
+  a{
+    color: $text-color;
+    display: inline-block;
+    padding: 16px;
+    text-decoration: none;
+  }
+
+  a:hover{
+    color: $primary-color;
+    text-decoration: none;
+    background: lighten($bg-color, 5);
+  }
+
+  span {
+    color: $primary-color;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(33,240,199, 0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+
+  .navbar-brand {
+    color: $primary-color;
+  }
+}
+
+$rowMarginTop: 25px;
+
+.row {
+  margin-top: $rowMarginTop;
+}
+
+.toprow {
+  @extend .row;
+  margin-top: $rowMarginTop + 50px;
+}
+
+@media (max-width: 768px) {
+
+  h1.display-2 {
+    font-size: $headline-mobile-font-size;
+  }
+
+}
+
+::selection {
+  background: $primary-color * .9;
+}
